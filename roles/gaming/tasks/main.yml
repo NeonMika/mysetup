@@ -1,0 +1,20 @@
+---
+- name: Download the heroic apt repository install script
+  get_url:
+    url: https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/rauldipeas.sh
+    dest: /tmp/heroic-apt-repository-installer.sh
+    mode: 0755
+
+- name: Execute the heroic apt repository install script
+  shell: /tmp/heroic-apt-repository-installer.sh
+
+- name: Remove the heroic apt repository install script
+  file:
+    path: /tmp/heroic-apt-repository-installer.sh
+    state: absent
+
+- name: install heroic
+  become: True
+  package:
+    name: heroic
+    state: present

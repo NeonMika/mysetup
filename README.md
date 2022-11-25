@@ -1,6 +1,10 @@
 # Linux Setup
 My personal software setup on Linux distributions, (partially) automated with Ansible
 
+## Gaming
+* [Heroic](https://heroicgameslauncher.com/)
+  * Heroic is an Open Source GOG and Epic games launcher for Linux, Windows and macOS. Also available on the SteamDeck!
+
 ## Fundamentals
 * [Zsh](https://www.zsh.org/)
   * [Oh-My-Zsh](https://ohmyz.sh/)
