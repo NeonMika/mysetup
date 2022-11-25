@@ -4,25 +4,16 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   roles:
-    - gnome
-    - network
-    - bluetooth
-    - role: wayland
-      tags: wayland
-    - role: sway
-      tags: wayland
-    - role: i3
-      tags: x11
-    - themes
-    - terminal
-    - vim
-    - gedit
-    - firefox
-    - okular
     - ark
-    - slack
-    - thunderbird
+    - bluetooth
     - dev
-    - security
     - dotfiles
+    - firefox
+    - gedit
+    - network
+    - okular
+    - security
+    - terminal
+    - thunderbird
+    - vim
 

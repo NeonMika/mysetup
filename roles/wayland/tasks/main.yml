@@ -1,7 +1,0 @@
----
-- name: install Xwayland
-  become: True
-  package:
-    name: xorg-x11-server-Xwayland
-    state: present
-
