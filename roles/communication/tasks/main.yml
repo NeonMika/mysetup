@@ -1,0 +1,35 @@
+---
+- name: install Thunderbird
+  become: True
+  package:
+    name: thunderbird
+    state: present
+
+- name: Download Rambox installer
+  get_url:
+    url: https://rambox.app/api/download?os=linux&package=deb
+    dest: /tmp/install-rambox.deb
+    mode: 0755
+
+- name: Execute Rambox installer
+  apt: deb="/tmp/install-rambox.deb"
+
+- name: Remove Rambox installer
+  file:
+    path: /tmp/install-rambox.deb
+    state: absent
+
+- name: Download Zoom installer
+  get_url:
+    url: https://zoom.us/client/5.12.6.173/zoom_amd64.deb
+    dest: /tmp/install-zoom.deb
+    mode: 0755
+
+- name: Execute Zoom installer
+  apt: deb="/tmp/install-zoom.deb"
+
+- name: Remove Zoom installer
+  file:
+    path: /tmp/install-zoom.deb
+    state: absent
+

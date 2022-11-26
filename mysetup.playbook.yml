@@ -4,17 +4,12 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
   roles:
-    - ark
-    - bluetooth
+    - communication
+    - connection
     - dev
-    - dotfiles
-    - firefox
+    - fundamentals
     - gaming
     - gedit
-    - network
     - okular
     - security
-    - terminal
-    - thunderbird
-    - vim
 

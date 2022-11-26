@@ -1,7 +1,0 @@
----
-- name: install Thunderbird
-  become: True
-  package:
-    name: thunderbird
-    state: present
-

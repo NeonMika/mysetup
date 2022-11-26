@@ -16,9 +16,8 @@
     state: present
 - name: install OpenJDK
   become: True
-  ignore_errors: true
   package:
-    name: java-latest-openjdk-devel
+    name: openjdk-19-jdk
     state: present
 - name: Install pv
   become: True

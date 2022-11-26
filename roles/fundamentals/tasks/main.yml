@@ -1,10 +1,4 @@
 ---
-- name: install Terminator
-  become: True
-  package:
-    name: terminator
-    state: present
-
 - name: install Zsh
   become: True
   package:
@@ -29,9 +23,38 @@
   command: zsh /tmp/install-oh-my-zsh.sh
   when: not oh_my_zsh_dir.stat.exists
 
+- name: install vim
+  become: True
+  package:
+    name: vim
+    state: present
+
+- name: install Terminator
+  become: True
+  package:
+    name: terminator
+    state: present
+
+- name: install ark
+  become: True
+  package:
+    name: ark
+    state: present
+
 - name: install FZF
   become: True
   package:
     name: fzf
     state: present
 
+- name: install Firefox
+  become: True
+  package:
+    name: firefox
+    state: present
+
+- name: install GNU stow
+  become: True
+  package:
+    name: stow
+    state: present
