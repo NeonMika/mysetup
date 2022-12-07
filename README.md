@@ -70,3 +70,5 @@ Following tools have not yet been integrated into the Ansible installation scrip
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
   * [IntelliJ](https://www.jetbrains.com/idea/)
 * [Visual Studio Code](https://github.com/Microsoft/vscode)
+* [GitKraken](https://www.gitkraken.com)
+  * Git GUI
