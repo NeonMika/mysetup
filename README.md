@@ -1,21 +1,33 @@
-# Linux Setup
-My personal software setup on Linux distributions, (partially) automated with Ansible
+# Automated Linux Setup
+My personal software setup on Linux distributions (tested on KDE Neon / Kubuntu), automated with Ansible.
 
-## Chat / Communication
+Thanks to @skloibi for the original setup this one is based upon.
+
+## Communication
 * [Thunderbird](https://www.thunderbird.net/)
+  * Mozilla Thunderbird is a free and open-source cross-platform email client, personal information manager, news client, RSS and chat client developed by the Mozilla Foundation
 * [Rambox](https://github.com/ramboxapp/community-edition)
+  * Rambox is a workspace organizer that allows you to unify as many applications as you want, all in one place. (Discord, Whatsapp, etc.)
 * [Zoom](https://zoom.us/)
+  * Video meetingss
 
 ## Connection
 * Bluetooth
   * [Bluez](http://www.bluez.org/)
+    * BlueZ is the official Linux Bluetooth stack. It provides, in it’s modular way, support for the core Bluetooth layers and protocols.
   * [Blueman](https://github.com/blueman-project/blueman)
+    * Blueman ist ein alternativer Bluetooth-Manager, der auf GTK setzt.
 
 ## Development
-* [OpenJDK](https://openjdk.java.net/)
-* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-  * [IntelliJ Community Edition](https://www.jetbrains.com/idea/)
-* [Visual Studio Code](https://github.com/Microsoft/vscode)
+* [cmake](https://cmake.org/)
+  * CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and workspaces that can be used in the compiler environment of your choice.
+* [OpenJDK 19](https://openjdk.org/projects/jdk/19/)
+  * JDK 19 is the open-source reference implementation of version 19 of the Java SE Platform, as specified by by JSR 394 in the Java Community Process.
+* [pv](https://linux.die.net/man/1/pv)
+  * pv allows a user to see the progress of data through a pipeline, by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA.
+* [NASM](https://www.nasm.us/)
+  * Netwide Assembler (NASM), an asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.
+
 
 ## Fundamentals
 * [Zsh](https://www.zsh.org/)
@@ -35,7 +47,10 @@ My personal software setup on Linux distributions, (partially) automated with An
 
 ## Gaming
 * [Heroic](https://heroicgameslauncher.com/)
-  * Heroic is an Open Source GOG and Epic games launcher for Linux, Windows and macOS. Also available on the SteamDeck!
+  * Heroic is an Open Source GOG and Epic games launcher for Linux, Windows and macOS. Also available on the SteamDeck.
+
+* [Steam](https://store.steampowered.com/)
+  * Game Library.
 
 ## Multimedia
 * [Spotify](https://www.spotify.com/)
@@ -48,4 +63,10 @@ My personal software setup on Linux distributions, (partially) automated with An
 ## Security
 * [KeePassXC](https://keepassxc.org/)
 
+# Manual Linux Setup
+Following tools have not yet been integrated into the Ansible installation script.
 
+## Development
+* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+  * [IntelliJ](https://www.jetbrains.com/idea/)
+* [Visual Studio Code](https://github.com/Microsoft/vscode)

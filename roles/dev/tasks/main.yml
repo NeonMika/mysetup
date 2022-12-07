@@ -4,16 +4,6 @@
   package:
     name: cmake
     state: present
-- name: install autoconf
-  become: True
-  package:
-    name: autoconf
-    state: present
-- name: install automake
-  become: True
-  package:
-    name: automake
-    state: present
 - name: install OpenJDK
   become: True
   package:
@@ -24,6 +14,7 @@
   package:
     name: pv
     state: present
+
 - name: Install Netwide x86 Assembler
   become: True
   package:

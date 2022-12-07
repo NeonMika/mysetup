@@ -4,7 +4,7 @@
   package:
     name: bluez
     state: present
-- name: install Bluetooth manager
+- name: install Blueman Bluetooth manager
   become: True
   package:
     name: blueman

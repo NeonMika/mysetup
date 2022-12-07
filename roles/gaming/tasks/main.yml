@@ -18,3 +18,9 @@
   package:
     name: heroic
     state: present
+
+- name: install Steam
+  become: True
+  package:
+    name: steam
+    state: present
