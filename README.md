@@ -27,6 +27,8 @@ Thanks to @skloibi for the original setup this one is based upon.
   * pv allows a user to see the progress of data through a pipeline, by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA.
 * [NASM](https://www.nasm.us/)
   * Netwide Assembler (NASM), an asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.
+* [Python 3]()
+  * [pip]()
 
 
 ## Fundamentals
@@ -49,9 +51,6 @@ Thanks to @skloibi for the original setup this one is based upon.
 * [Heroic](https://heroicgameslauncher.com/)
   * Heroic is an Open Source GOG and Epic games launcher for Linux, Windows and macOS. Also available on the SteamDeck.
 
-* [Steam](https://store.steampowered.com/)
-  * Game Library.
-
 ## Multimedia
 * [Spotify](https://www.spotify.com/)
 
@@ -72,3 +71,7 @@ Following tools have not yet been integrated into the Ansible installation scrip
 * [Visual Studio Code](https://github.com/Microsoft/vscode)
 * [GitKraken](https://www.gitkraken.com)
   * Git GUI
+
+## Gaming
+* [Steam](https://store.steampowered.com/)
+  * Game Library.

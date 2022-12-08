@@ -1,26 +1,16 @@
 ---
-- name: Download the heroic apt repository install script
+- name: Download heroic 2.5.1 deb
   get_url:
-    url: https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/rauldipeas.sh
-    dest: /tmp/heroic-apt-repository-installer.sh
+    url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.1/heroic_2.5.1_amd64.deb
+    dest: /tmp/heroic.deb
     mode: 0755
-
-- name: Execute the heroic apt repository install script
-  shell: /tmp/heroic-apt-repository-installer.sh
-
-- name: Remove the heroic apt repository install script
-  file:
-    path: /tmp/heroic-apt-repository-installer.sh
-    state: absent
 
 - name: install heroic
   become: True
-  package:
-    name: heroic
-    state: present
+  apt:
+    deb: /tmp/heroic.deb
 
-- name: install Steam
-  become: True
-  package:
-    name: steam
-    state: present
+- name: Remove heroic deb
+  file:
+    path: /tmp/heroic.deb
+    state: absent

@@ -20,4 +20,14 @@
   package:
     name: nasm
     state: present
+- name: Install Python3
+  become: True
+  package:
+    name: python3
+    state: present
+- name: Install Python3 pip
+  become: True
+  package:
+    name: python3-pip
+    state: present
 
