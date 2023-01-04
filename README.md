@@ -55,9 +55,14 @@ Thanks to @skloibi for the original setup this one is based upon.
 * [Spotify](https://www.spotify.com/)
 
 ## Office
-* [Zotero](https://www.zotero.org/)
 * [Okular](https://okular.kde.org/)
-* [Draw.io](https://github.com/jgraph/drawio-desktop)
+  * Universal Document Viewer
+* [Gedit](https://wiki.ubuntuusers.de/gedit/)
+  * Gedit - der GNOME-Editor - ist der Standard-Texteditor in der GNOME-Desktopumgebung.
+* [Xournal](https://xournal.sourceforge.netx)
+  * Xournal is an application for notetaking, sketching, keeping a journal using a stylus. It is free software (GNU GPL) and runs on Linux (recent distributions) and other GTK+/Gnome platforms. It is similar to Microsoft Windows Journal or to other alternatives such as Jarnal, Gournal, and NoteLab.
+* [Xournal++](https://xournalpp.github.io/)
+  * Xournal++ is an open-source and cross-platform note-taking software that is fast, flexible, and functional. A modern rewrite and a more feature-rich version of the wonderful Xournal program.
 
 ## Security
 * [KeePassXC](https://keepassxc.org/)
@@ -75,3 +80,7 @@ Following tools have not yet been integrated into the Ansible installation scrip
 ## Gaming
 * [Steam](https://store.steampowered.com/)
   * Game Library.
+
+## Office
+* [Zotero](https://www.zotero.org/)
+  * Literaturverwaltung
