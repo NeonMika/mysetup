@@ -4,7 +4,7 @@ sudo add-apt-repository -y universe
 sudo add-apt-repository -y multiverse
 sudo apt update
 
-sudo dnf install -y ansible
-sudo apt install -y ansible
-sudo pamac install ansible
+# https://wiki.ubuntuusers.de/Grafikkarten/Nvidia/nvidia/
+sudo apt-get purge \*nvidia\* ; sudo apt-get install nvidia-driver-525 nvidia-settings # check if 525 should be updated
+
 ansible-playbook -i hosts mysetup.playbook.yml
