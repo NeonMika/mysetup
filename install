@@ -19,3 +19,9 @@ mkdir ~/Apps
 cp jetbrains-toolbox-*/* ~/Apps
 rm -r jetbrains-toolbox*
 ~/Apps/jetbrains-toolbox
+
+# Clone all git repositories, https://stackoverflow.com/questions/19576742/how-to-clone-all-repos-at-once-from-github
+gh auth login
+gh repo list neonmika --limit 1000 | while read -r repo _; do
+  gh repo clone $repo ~/Repos/$repo
+done
