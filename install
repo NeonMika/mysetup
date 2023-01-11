@@ -7,4 +7,15 @@ sudo apt update
 # https://wiki.ubuntuusers.de/Grafikkarten/Nvidia/nvidia/
 sudo apt-get purge \*nvidia\* ; sudo apt-get install nvidia-driver-525 nvidia-settings # check if 525 should be updated
 
+sudo dnf install -y ansible gh
+sudo apt install -y ansible gh
+sudo pamac install ansible gh
 ansible-playbook -i hosts mysetup.playbook.yml
+
+# JetBrains Toolbox
+wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
+tar -xzf jetbrains-toolbox.tar.gz
+mkdir ~/Apps
+cp jetbrains-toolbox-*/* ~/Apps
+rm -r jetbrains-toolbox*
+~/Apps/jetbrains-toolbox
