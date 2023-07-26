@@ -8,6 +8,8 @@ Thanks to @skloibi for the original setup this one is based upon.
   * Mozilla Thunderbird is a free and open-source cross-platform email client, personal information manager, news client, RSS and chat client developed by the Mozilla Foundation
 * [Rambox](https://github.com/ramboxapp/community-edition)
   * Rambox is a workspace organizer that allows you to unify as many applications as you want, all in one place. (Discord, Whatsapp, etc.)
+* [Signal]()
+  * Messenger
 * [Zoom](https://zoom.us/)
   * Video meetingss
 
@@ -21,6 +23,11 @@ Thanks to @skloibi for the original setup this one is based upon.
 ## Development
 * [cmake](https://cmake.org/)
   * CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and workspaces that can be used in the compiler environment of your choice.
+* [gh](https://cli.github.com/)
+  * GitHub CLI
+* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/) (only in Ubuntu script, not ansible)
+* [nvm](https://github.com/nvm-sh/nvm) (only in Ubuntu script, not ansible)
+  * Node version manager
 * [OpenJDK 19](https://openjdk.org/projects/jdk/19/)
   * JDK 19 is the open-source reference implementation of version 19 of the Java SE Platform, as specified by by JSR 394 in the Java Community Process.
 * [pv](https://linux.die.net/man/1/pv)
@@ -29,7 +36,6 @@ Thanks to @skloibi for the original setup this one is based upon.
   * Netwide Assembler (NASM), an asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.
 * [Python 3]()
   * [pip]()
-
 
 ## Fundamentals
 * [Zsh](https://www.zsh.org/)
@@ -48,20 +54,28 @@ Thanks to @skloibi for the original setup this one is based upon.
   * GNU Stow is a symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
 
 ## Gaming
+
 * [Heroic](https://heroicgameslauncher.com/)
   * Heroic is an Open Source GOG and Epic games launcher for Linux, Windows and macOS. Also available on the SteamDeck.
 
-## Multimedia
-* [Spotify](https://www.spotify.com/)
+* [Lutris](https://lutris.net/) (only in Ubuntu script, not ansible)
+  * Open Gaming Platform.
+
+* [MangoHud](https://github.com/flightlessmango/MangoHud) (only in Ubuntu script, not ansible)
+  * A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
+
+* [Steam](https://store.steampowered.com/) (only in Ubuntu script, not ansible)
+  * Game Library.
 
 ## Office
-* [Okular](https://okular.kde.org/)
-  * Universal Document Viewer
 * [Gedit](https://wiki.ubuntuusers.de/gedit/)
   * Gedit - der GNOME-Editor - ist der Standard-Texteditor in der GNOME-Desktopumgebung.
-* [Xournal](https://xournal.sourceforge.netx)
+  * [gedit-plugins]()
+* [Okular](https://okular.kde.org/)
+  * Universal Document Viewer
+* [Xournal](https://xournal.sourceforge.netx) (only in Ubuntu script, not ansible)
   * Xournal is an application for notetaking, sketching, keeping a journal using a stylus. It is free software (GNU GPL) and runs on Linux (recent distributions) and other GTK+/Gnome platforms. It is similar to Microsoft Windows Journal or to other alternatives such as Jarnal, Gournal, and NoteLab.
-* [Xournal++](https://xournalpp.github.io/)
+* [Xournal++](https://xournalpp.github.io/) (only in Ubuntu script, not ansible)
   * Xournal++ is an open-source and cross-platform note-taking software that is fast, flexible, and functional. A modern rewrite and a more feature-rich version of the wonderful Xournal program.
 
 ## Security
@@ -71,15 +85,14 @@ Thanks to @skloibi for the original setup this one is based upon.
 Following tools have not yet been integrated into the Ansible installation script.
 
 ## Development
-* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-  * [IntelliJ](https://www.jetbrains.com/idea/)
+* [IntelliJ](https://www.jetbrains.com/idea/) via Jetbrains Toolbox
 * [Visual Studio Code](https://github.com/Microsoft/vscode)
 * [GitKraken](https://www.gitkraken.com)
   * Git GUI
 
-## Gaming
-* [Steam](https://store.steampowered.com/)
-  * Game Library.
+## Multimedia
+* [Spotify](https://www.spotify.com/)
+  * Music streaming
 
 ## Office
 * [Zotero](https://www.zotero.org/)
