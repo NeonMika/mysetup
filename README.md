@@ -32,6 +32,8 @@ Thanks to @skloibi for the original setup this one is based upon.
   * Netwide Assembler (NASM), an asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.
 * [nvm](https://github.com/nvm-sh/nvm) (only in Ubuntu script, not ansible)
   * Node version manager
+  * [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/)
+    * Javascript runtime and package manager
 * [OpenJDK 19](https://openjdk.org/projects/jdk/19/)
   * JDK 19 is the open-source reference implementation of version 19 of the Java SE Platform, as specified by by JSR 394 in the Java Community Process.
 * [pv](https://linux.die.net/man/1/pv)

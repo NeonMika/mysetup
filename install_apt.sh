@@ -112,6 +112,7 @@ sudo apt install nasm
 
 ## nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+nvm install --lts
 
 ## openjdk-19-jdk
 sudo apt install openjdk-19-jdk
@@ -212,3 +213,8 @@ done
 gh repo list neonmika --limit 1000 | while read -r repo _; do
   gh repo clone $repo ~/Repos/$repo
 done
+
+git clone https://ssw.jku.at/git/teaching/ub ~/Repos/ssw.jku.at/Compilerbau
+git clone https://ssw.jku.at/git/research/eInformatics ~/Repos/ssw.jku.at/eInformatics
+git clone http://ssw.jku.at/git/teaching/kotlin ~/Repos/ssw.jku.at/Kotlin
+git clone ssh://teacher@poseidon.soft.uni-linz.ac.at:70/git/teaching ~/Repos/Pervasive/Teaching
