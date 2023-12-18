@@ -1,7 +1,0 @@
----
-- name: Install KeePassXC
-  become: True
-  package:
-    name: keepassxc
-    state: present
-
