@@ -40,6 +40,10 @@ Thanks to @skloibi for the original setup this one is based upon.
   * pv allows a user to see the progress of data through a pipeline, by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA.
 * [Python 3]()
   * [pip]()
+  * Packages:
+    * python3-numpy
+    * python3-pandas
+    * python3-matplotlib
 * [Visual Studio Code](https://code.visualstudio.com/)
   * Extensible code editor / lightweight IDE.
 
