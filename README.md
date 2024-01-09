@@ -27,6 +27,8 @@ Thanks to @skloibi for the original setup this one is based upon.
   * CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and workspaces that can be used in the compiler environment of your choice.
 * [gh](https://cli.github.com/)
   * GitHub CLI
+* [GitKraken](https://www.gitkraken.com/)
+  * Visual git client
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)s
 * [NASM](https://www.nasm.us/)
   * Netwide Assembler (NASM), an asssembler for the x86 CPU architecture portable to nearly every modern platform, and with code generation for many platforms old and new.

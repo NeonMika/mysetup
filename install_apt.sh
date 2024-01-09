@@ -99,6 +99,12 @@ sudo apt install cmake
 ## gh
 sudo apt install gh
 
+## Gitkraken
+sudo wget -cO /tmp/install-gitkraken.deb "https://release.axocdn.com/linux/gitkraken-amd64.deb"
+sudo chmod 0755 /tmp/install-gitkraken.deb
+sudo apt install /tmp/install-gitkraken.deb
+sudo rm /tmp/install-gitkraken.deb
+
 ## JetBrains Toolbox
 wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
 tar -xzf jetbrains-toolbox.tar.gz
