@@ -46,6 +46,8 @@ Thanks to @skloibi for the original setup this one is based upon.
     * python3-numpy
     * python3-pandas
     * python3-matplotlib
+* [termius](https://termius.com/)
+  * SSH and SFTP client
 * [Visual Studio Code](https://code.visualstudio.com/)
   * Extensible code editor / lightweight IDE.
 

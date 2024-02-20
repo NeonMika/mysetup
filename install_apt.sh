@@ -135,7 +135,14 @@ sudo apt install python3-pip
 ## python packages
 sudo apt install python3-numpy python3-pandas python3-matplotlib
 
-# VS code
+## termius
+sudo wget -cO /tmp/install-termius.deb "https://www.termius.com/download/linux/Termius.deb"
+sudo chmod 0755 /tmp/install-termius.deb
+sudo apt install /tmp/install-termius.deb
+sudo rm /tmp/install-termius.deb
+
+
+## VS code
 sudo wget -cO /tmp/install-vscode.deb "https://vscode.download.prss.microsoft.com/dbazure/download/stable/af28b32d7e553898b2a91af498b1fb666fdebe0c/code_1.85.0-1701902998_amd64.deb"
 sudo chmod 0755 /tmp/install-vscode.deb
 sudo apt install /tmp/install-vscode.deb
