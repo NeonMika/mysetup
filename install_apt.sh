@@ -109,9 +109,9 @@ sudo rm /tmp/install-gitkraken.deb
 wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
 tar -xzf jetbrains-toolbox.tar.gz
 mkdir ~/Apps
-cp jetbrains-toolbox-*/* ~/Apps
+cp jetbrains-toolbox-*/* ~/Applications
 rm -r jetbrains-toolbox*
-~/Apps/jetbrains-toolbox
+~/Applications/jetbrains-toolbox
 
 ## nasm
 sudo apt install nasm
