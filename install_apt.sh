@@ -227,3 +227,84 @@ git clone https://ssw.jku.at/git/teaching/ub ~/Repos/ssw.jku.at/Compilerbau
 git clone https://ssw.jku.at/git/research/eInformatics ~/Repos/ssw.jku.at/eInformatics
 git clone http://ssw.jku.at/git/teaching/kotlin ~/Repos/ssw.jku.at/Kotlin
 git clone ssh://teacher@poseidon.soft.uni-linz.ac.at:70/git/teaching ~/Repos/Pervasive/Teaching
+
+# Function to read and store credentials
+read_and_store_credentials() {
+	target_samba="$1"
+	credential_file="$2"
+
+    read -p "$target_samba username: " username
+    read -p "$target_samba password: " password
+
+	sudo touch "$credential_file"
+
+    # Set permissions to 700
+    sudo chmod 700 "$credential_file"
+
+    echo "username=$username" | sudo tee "$credential_file" > /dev/null
+    echo "password=$password" | sudo tee -a "$credential_file" > /dev/null
+
+    # Set permissions to 600
+    sudo chmod 600 "$credential_file"
+}
+
+# Function to add or check a mount point in fstab
+add_or_check_mount() {
+    grep -qF "$1" "$fstab"
+    if [ $? -eq 0 ]; then
+        echo "Mount point $1 already exists in $fstab."
+    else
+        echo "Adding mount point $1 to $fstab."
+        echo "$1" | sudo tee -a "$fstab" > /dev/null
+    fi
+}
+
+# Mount shared drives
+
+# Puck
+read_and_store_credentials "puck.ssw.jku.at" "/etc/samba/puck_credentials"
+
+# Oberon
+read_and_store_credentials "oberon.ssw.jku.at" "/etc/samba/oberon_credentials"
+
+# Create mounting directories
+sudo mkdir -p "/mnt/puck/home"
+sudo mkdir -p "/mnt/puck/Compilerbau"
+sudo mkdir -p "/mnt/puck/eInformatics"
+sudo mkdir -p "/mnt/puck/InGO"
+sudo mkdir -p "/mnt/puck/Kotlin"
+sudo mkdir -p "/mnt/puck/SW1"
+sudo mkdir -p "/mnt/puck/SW2"
+sudo mkdir -p "/mnt/oberon/www"
+sudo mkdir -p "/mnt/oberon/WebProfile"
+
+# Modify fstab to contain mounting points
+fstab="/etc/fstab"
+
+# Puck
+puck_mounts=(
+    "//puck.ssw.jku.at/Compilerbau /mnt/puck/Compilerbau cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/eInformatics /mnt/puck/eInformatics cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/home /mnt/puck/home cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/InGO /mnt/puck/InGO cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/Kotlin /mnt/puck/Kotlin cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/SW1 /mnt/puck/SW1 cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//puck.ssw.jku.at/SW2 /mnt/puck/SW2 cifs credentials=/etc/samba/puck_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+)
+
+# Oberon
+oberon_mounts=(
+    "//oberon.ssw.jku.at/www /mnt/oberon/www cifs credentials=/etc/samba/oberon_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+    "//oberon.ssw.jku.at/WebProfile /mnt/oberon/WebProfile cifs credentials=/etc/samba/oberon_credentials,uid=1000,gid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=3.0 0 0 0 0"
+)
+
+# Add or check mounts in fstab
+for mount in "${puck_mounts[@]}"; do
+    add_or_check_mount "$mount"
+done
+
+for mount in "${oberon_mounts[@]}"; do
+    add_or_check_mount "$mount"
+done
+
+sudo mount -a
